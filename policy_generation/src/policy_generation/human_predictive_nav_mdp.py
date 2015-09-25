@@ -41,21 +41,22 @@ class HumanPredictiveNavMdp(Mdp):
         self.initial_state['human_x']=9
         self.initial_state['human_y']=13
         self.initial_state['time_step']=0
-        0.5:(robot_y=robot_y+1) & (human_x=3) & (human_y=4) & (time_step = ' + str(t) + '+1
         self.n_props=1
         self.props=['close_to_human']
-        self.props_def['close_to_human']='(abs(robot_x - human_x) < 2) & (abs(robot_y - human_y) < 2)'
+        self.props_def['close_to_human']=MdpPropDef(name='close_to_human',
+                                                    conds='(abs(robot_x - human_x) < 2) & (abs(robot_y - human_y) < 2)')
         self.n_actions=5
         self.actions=['move_up', 'move_left', 'move_right', 'wait']
-        
+        self.reward_names=['time']
         for t in range(0,n_time_steps):
             action='move_up'
             pre_conds='(robot_y > 1) & (time_step = ' + str(t) + ')'
-            prob_post_conds='0.5:(robot_y=robot_y+1) & (human_x=3) & (human_y=4) & (time_step = ' + str(t) + '+1) + 0.5:(robot_y=robot_y+1) & (human_x=4) & (human_y=10) & (time_step = ' + str(t) + '+1)' 
+            prob_post_conds=[[0.5, '(robot_y=robot_y+1) & (human_x=3) & (human_y=4) & (time_step = ' + str(t+1) + ')'], 
+                              [0.5,'(robot_y=robot_y+1) & (human_x=4) & (human_y=10) & (time_step = ' + str(t+1) + ')']]
             rewards={'time':1} 
             self.transitions.append(MdpTransitionDef(action_name=action,
                                             pre_conds=pre_conds,
                                             prob_post_conds=prob_post_conds,
                                             rewards=rewards,
-                                            exec_count=0))}
+                                            exec_count=0))
             

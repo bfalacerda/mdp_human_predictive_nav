@@ -20,6 +20,7 @@ class MdpNavServer(object):
         #self.prism_policy_generator=PrismJavaTalker(8088,self.directory, self.file_name)
         
         self.human_nav_mdp=HumanPredictiveNavMdp(human_mc_file, n_rows, n_columns, n_time_steps)
+        self.human_nav_mdp.write_prism_model('/home/bruno/Desktop/test.mdp')
 
         
         #self.mdp_nav_as=SimpleActionServer('object_search_mdp', ObjectSearchMdpAction, execute_cb = self.execute_policy_cb, auto_start = False)
