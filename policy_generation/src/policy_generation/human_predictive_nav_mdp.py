@@ -59,4 +59,44 @@ class HumanPredictiveNavMdp(Mdp):
                                             prob_post_conds=prob_post_conds,
                                             rewards=rewards,
                                             exec_count=0))
+            action='move_down'
+            pre_conds='(robot_y > 1) & (time_step = ' + str(t) + ')'
+            prob_post_conds=[[0.5, '(robot_y=robot_y+1) & (human_x=3) & (human_y=4) & (time_step = ' + str(t+1) + ')'], 
+                              [0.5,'(robot_y=robot_y+1) & (human_x=4) & (human_y=10) & (time_step = ' + str(t+1) + ')']]
+            rewards={'time':1} 
+            self.transitions.append(MdpTransitionDef(action_name=action,
+                                            pre_conds=pre_conds,
+                                            prob_post_conds=prob_post_conds,
+                                            rewards=rewards,
+                                            exec_count=0))
+            action='move_left'
+            pre_conds='(robot_y > 1) & (time_step = ' + str(t) + ')'
+            prob_post_conds=[[0.5, '(robot_y=robot_y+1) & (human_x=3) & (human_y=4) & (time_step = ' + str(t+1) + ')'], 
+                              [0.5,'(robot_y=robot_y+1) & (human_x=4) & (human_y=10) & (time_step = ' + str(t+1) + ')']]
+            rewards={'time':1} 
+            self.transitions.append(MdpTransitionDef(action_name=action,
+                                            pre_conds=pre_conds,
+                                            prob_post_conds=prob_post_conds,
+                                            rewards=rewards,
+                                            exec_count=0))
+            action='move_right'
+            pre_conds='(robot_y > 1) & (time_step = ' + str(t) + ')'
+            prob_post_conds=[[0.5, '(robot_y=robot_y+1) & (human_x=3) & (human_y=4) & (time_step = ' + str(t+1) + ')'], 
+                              [0.5,'(robot_y=robot_y+1) & (human_x=4) & (human_y=10) & (time_step = ' + str(t+1) + ')']]
+            rewards={'time':1} 
+            self.transitions.append(MdpTransitionDef(action_name=action,
+                                            pre_conds=pre_conds,
+                                            prob_post_conds=prob_post_conds,
+                                            rewards=rewards,
+                                            exec_count=0))
+            action='wait'
+            pre_conds='(robot_y > 1) & (time_step = ' + str(t) + ')'
+            prob_post_conds=[[0.5, '(robot_y=robot_y+1) & (human_x=3) & (human_y=4) & (time_step = ' + str(t+1) + ')'], 
+                              [0.5,'(robot_y=robot_y+1) & (human_x=4) & (human_y=10) & (time_step = ' + str(t+1) + ')']]
+            rewards={'time':1} 
+            self.transitions.append(MdpTransitionDef(action_name=action,
+                                            pre_conds=pre_conds,
+                                            prob_post_conds=prob_post_conds,
+                                            rewards=rewards,
+                                            exec_count=0))
             
