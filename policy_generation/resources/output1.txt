@@ -1,0 +1,540 @@
+PRISM server for object search running on port 8088
+got connection on port8088
+PRISM
+=====
+
+Version: 4.2.1.dev
+Date: Wed Sep 30 16:54:14 BST 2015
+Hostname: bruno-mbp
+
+Type:        MDP
+Modules:     M 
+Variables:   robot_x robot_y human_x human_y time_step 
+
+---------------------------------------------------------------------
+
+Model checking: ijcai(Pmax=? [ F ("close_to_human") ])
+
+Building model...
+
+Computing reachable states... 22462 states
+Reachable states exploration and model construction done in 0.989 secs.
+Sorting reachable states list...
+
+Time for model construction: 1.141 seconds.
+
+Warning: Deadlocks detected and fixed in 324 states
+
+Type:        MDP
+States:      22462 (1 initial)
+Transitions: 598334
+Choices:     104403
+Max/avg:     5/4.65
+Building cost structure...
+
+Building deterministic automaton (for F "L0")...
+Taking deterministic Rabin automaton from library...
+DFA has 2 states, 1 goal states.
+Time for DFA translation: 0.005 seconds.
+
+Automaton state distances to an accepting state: [1.0, 0.0]
+Time for DFA distance to acceptance metric calculation: 0.0 seconds.
+
+Skipping accepting MEC computation since acceptance is defined via goal states...
+Time for lifting progression reward from automaton to product: 0.058 seconds.
+Time for lifting cost function from original model to product: 0.019 seconds.
+
+Cleared costs for 19180 states where no more progression towards goal is possible.
+Time for cost trimming: 0.182 seconds.
+
+Exporting product state space to file "/home/bruno/tmp/prism/human_predictive_nav//prod.sta"...
+
+Computing reachability probabilities...
+
+Exporting target states info to file "/home/bruno/tmp/prism/human_predictive_nav//prod.lab"...
+Starting Prob0 (max)...
+Prob0 (max) took 17 iterations and 0.219 seconds.
+Starting Prob1 (max)...
+Prob1 (max) took 274 iterations and 3.717 seconds.
+target=10614, yes=10614, no=8580, maybe=13421
+Starting prioritised value iteration (max)...
+Prioritised value iteration (max) took 18 iterations and 0.48 seconds.
+Overall policy calculation took  4.878 seconds.
+
+Maximum probability to satisfy specification is 0.7754648640311317
+
+For p = 0.7754648640311317, the maximum expected cummulative reward to satisfy specification is 0.7754648640311317
+
+For p = 0.7754648640311317, r = 0.7754648640311317 the minimum expected  cummulative cost to satisfy specification is 22.20990168399162
+
+Value in the initial state: 22.20990168399162
+
+Time for model checking: 6.978 seconds.
+
+Result: 22.20990168399162 (value in the initial state)
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.093, 0.306, 0.323, 0.323, 0.323, 0.323, 0.323, 0.323, 0.376, 0.77, 0.835, 0.843, 0.843, 0.843, 0.843, 0.843, 0.843, 0.891, 0.901, 0.924, 0.99, 0.99, 0.99, 0.99, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+error creating PRISM directory: [Errno 17] File exists: '/home/bruno/tmp/prism/human_predictive_nav/'
+[INFO] [WallTime: 1443628454.936076] MDP  human nav initialised.
+[INFO] [WallTime: 1443628454.942073] Creating high level search policy...
+[INFO] [WallTime: 1443628463.315027] Socket closed
+[INFO] [WallTime: 1443628463.315413] Policy created
+FOUNDTrue
+{'_da': 0, 'robot_x': 1, 'robot_y': 40, 'human_y': 13, 'human_x': 8, 'time_step': 0}
+{'_da': 0, 'robot_x': 1, 'robot_y': 40, 'human_y': 13, 'human_x': 8, 'time_step': 0}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 13, 'human_x': 6, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 12, 'human_x': 6, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 11, 'human_x': 6, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 10, 'human_x': 6, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 10, 'human_x': 5, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 10, 'human_x': 4, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 9, 'human_x': 4, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 19, 'human_x': 5, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 7, 'human_x': 4, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 6, 'human_x': 4, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 5, 'human_x': 4, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 3, 'human_x': 4, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 2, 'human_x': 4, 'time_step': 15}
+move_right
+{'_da': 1, 'robot_x': 4, 'robot_y': 27, 'human_y': 26, 'human_x': 5, 'time_step': 16}
+
+-----------------
+
+
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 13, 'human_x': 6, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 14, 'human_x': 6, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 10, 'human_x': 7, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 9, 'human_x': 7, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 9, 'human_x': 6, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 10, 'human_x': 4, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 7, 'human_x': 6, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 8, 'human_x': 4, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 7, 'human_x': 4, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 6, 'human_x': 4, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 4, 'human_x': 5, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 4, 'human_x': 4, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 3, 'human_x': 4, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 26, 'human_x': 6, 'time_step': 15}
+move_right
+{'_da': 0, 'robot_x': 4, 'robot_y': 27, 'human_y': 1, 'human_x': 4, 'time_step': 16}
+move_right
+{'_da': 1, 'robot_x': 5, 'robot_y': 27, 'human_y': 28, 'human_x': 6, 'time_step': 17}
+
+-----------------
+
+
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 13, 'human_x': 6, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 11, 'human_x': 7, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 12, 'human_x': 5, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 10, 'human_x': 6, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 11, 'human_x': 4, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 10, 'human_x': 4, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 19, 'human_x': 6, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 20, 'human_x': 6, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 7, 'human_x': 4, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 5, 'human_x': 5, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 5, 'human_x': 4, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 4, 'human_x': 4, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 26, 'human_x': 6, 'time_step': 15}
+move_right
+{'_da': 0, 'robot_x': 4, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 16}
+move_right
+{'_da': 0, 'robot_x': 5, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 17}
+move_down
+{'_da': 1, 'robot_x': 5, 'robot_y': 28, 'human_y': 28, 'human_x': 5, 'time_step': 18}
+
+-----------------
+
+
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 13, 'human_x': 6, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 12, 'human_x': 6, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 12, 'human_x': 5, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 11, 'human_x': 5, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 11, 'human_x': 4, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 17, 'human_x': 5, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 9, 'human_x': 4, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 0, 'human_x': 0, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 20, 'human_x': 5, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 0, 'human_x': 0, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 5, 'human_x': 4, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 2, 'human_x': 4, 'time_step': 15}
+move_right
+{'_da': 1, 'robot_x': 4, 'robot_y': 27, 'human_y': 26, 'human_x': 5, 'time_step': 16}
+
+-----------------
+
+
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 12, 'human_x': 7, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 13, 'human_x': 5, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 11, 'human_x': 6, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 12, 'human_x': 4, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 9, 'human_x': 6, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 7, 'human_x': 7, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 8, 'human_x': 7, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 8, 'human_x': 4, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 0, 'human_x': 0, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 6, 'human_x': 4, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 5, 'human_x': 4, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 4, 'human_x': 4, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 15}
+move_right
+{'_da': 1, 'robot_x': 4, 'robot_y': 27, 'human_y': 26, 'human_x': 5, 'time_step': 16}
+
+-----------------
+
+
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 13, 'human_x': 6, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 12, 'human_x': 6, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 12, 'human_x': 5, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 10, 'human_x': 6, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 16, 'human_x': 5, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 8, 'human_x': 6, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 9, 'human_x': 4, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 0, 'human_x': 0, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 0, 'human_x': 0, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 6, 'human_x': 4, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 0, 'human_x': 0, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 3, 'human_x': 5, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 2, 'human_x': 4, 'time_step': 15}
+move_right
+{'_da': 0, 'robot_x': 4, 'robot_y': 27, 'human_y': 1, 'human_x': 4, 'time_step': 16}
+move_right
+{'_da': 0, 'robot_x': 5, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 17}
+move_down
+{'_da': 1, 'robot_x': 5, 'robot_y': 28, 'human_y': 28, 'human_x': 5, 'time_step': 18}
+
+-----------------
+
+
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 12, 'human_x': 7, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 11, 'human_x': 7, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 12, 'human_x': 5, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 11, 'human_x': 5, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 11, 'human_x': 4, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 10, 'human_x': 4, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 0, 'human_x': 0, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 9, 'human_x': 3, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 7, 'human_x': 4, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 5, 'human_x': 5, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 5, 'human_x': 4, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 3, 'human_x': 4, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 2, 'human_x': 4, 'time_step': 15}
+move_right
+{'_da': 0, 'robot_x': 4, 'robot_y': 27, 'human_y': 1, 'human_x': 4, 'time_step': 16}
+move_right
+{'_da': 0, 'robot_x': 5, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 17}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 28, 'human_y': 0, 'human_x': 0, 'time_step': 18}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 29, 'human_y': 0, 'human_x': 0, 'time_step': 19}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 30, 'human_y': 0, 'human_x': 0, 'time_step': 20}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 31, 'human_y': 0, 'human_x': 0, 'time_step': 21}
+move_right
+{'_da': 0, 'robot_x': 6, 'robot_y': 31, 'human_y': 0, 'human_x': 0, 'time_step': 22}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 32, 'human_y': 0, 'human_x': 0, 'time_step': 23}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 33, 'human_y': 0, 'human_x': 0, 'time_step': 24}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 34, 'human_y': 0, 'human_x': 0, 'time_step': 25}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 35, 'human_y': 0, 'human_x': 0, 'time_step': 26}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 36, 'human_y': 0, 'human_x': 0, 'time_step': 27}
+move_left
+{'_da': 0, 'robot_x': 5, 'robot_y': 36, 'human_y': 0, 'human_x': 0, 'time_step': 28}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 37, 'human_y': 0, 'human_x': 0, 'time_step': 29}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 38, 'human_y': 0, 'human_x': 0, 'time_step': 30}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 39, 'human_y': 0, 'human_x': 0, 'time_step': 31}
+
+-----------------
+
+
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 13, 'human_x': 6, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 11, 'human_x': 7, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 12, 'human_x': 5, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 12, 'human_x': 4, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 16, 'human_x': 5, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 9, 'human_x': 5, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 18, 'human_x': 5, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 0, 'human_x': 0, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 0, 'human_x': 0, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 5, 'human_x': 5, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 5, 'human_x': 4, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 3, 'human_x': 4, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 2, 'human_x': 4, 'time_step': 15}
+move_right
+{'_da': 0, 'robot_x': 4, 'robot_y': 27, 'human_y': 1, 'human_x': 4, 'time_step': 16}
+move_right
+{'_da': 0, 'robot_x': 5, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 17}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 28, 'human_y': 0, 'human_x': 0, 'time_step': 18}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 29, 'human_y': 0, 'human_x': 0, 'time_step': 19}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 30, 'human_y': 0, 'human_x': 0, 'time_step': 20}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 31, 'human_y': 0, 'human_x': 0, 'time_step': 21}
+move_right
+{'_da': 0, 'robot_x': 6, 'robot_y': 31, 'human_y': 0, 'human_x': 0, 'time_step': 22}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 32, 'human_y': 0, 'human_x': 0, 'time_step': 23}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 33, 'human_y': 0, 'human_x': 0, 'time_step': 24}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 34, 'human_y': 0, 'human_x': 0, 'time_step': 25}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 35, 'human_y': 32, 'human_x': 9, 'time_step': 26}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 36, 'human_y': 0, 'human_x': 0, 'time_step': 27}
+move_left
+{'_da': 0, 'robot_x': 5, 'robot_y': 36, 'human_y': 0, 'human_x': 0, 'time_step': 28}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 37, 'human_y': 0, 'human_x': 0, 'time_step': 29}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 38, 'human_y': 0, 'human_x': 0, 'time_step': 30}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 39, 'human_y': 0, 'human_x': 0, 'time_step': 31}
+
+-----------------
+
+
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 13, 'human_x': 6, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 11, 'human_x': 7, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 15, 'human_x': 6, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 15, 'human_x': 5, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 15, 'human_x': 4, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 17, 'human_x': 5, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 0, 'human_x': 0, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 8, 'human_x': 4, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 0, 'human_x': 0, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 7, 'human_x': 3, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 6, 'human_x': 3, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 25, 'human_x': 5, 'time_step': 15}
+move_right
+{'_da': 0, 'robot_x': 4, 'robot_y': 27, 'human_y': 1, 'human_x': 4, 'time_step': 16}
+move_right
+{'_da': 0, 'robot_x': 5, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 17}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 28, 'human_y': 0, 'human_x': 0, 'time_step': 18}
+move_down
+{'_da': 1, 'robot_x': 5, 'robot_y': 29, 'human_y': 30, 'human_x': 6, 'time_step': 19}
+
+-----------------
+
+
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 39, 'human_y': 13, 'human_x': 7, 'time_step': 1}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 38, 'human_y': 12, 'human_x': 7, 'time_step': 2}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 37, 'human_y': 12, 'human_x': 6, 'time_step': 3}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 36, 'human_y': 11, 'human_x': 6, 'time_step': 4}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 35, 'human_y': 11, 'human_x': 5, 'time_step': 5}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 34, 'human_y': 10, 'human_x': 5, 'time_step': 6}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 33, 'human_y': 10, 'human_x': 4, 'time_step': 7}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 32, 'human_y': 8, 'human_x': 5, 'time_step': 8}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 31, 'human_y': 19, 'human_x': 5, 'time_step': 9}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 30, 'human_y': 0, 'human_x': 0, 'time_step': 10}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 29, 'human_y': 6, 'human_x': 4, 'time_step': 11}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 28, 'human_y': 0, 'human_x': 0, 'time_step': 12}
+move_up
+{'_da': 0, 'robot_x': 1, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 13}
+move_right
+{'_da': 0, 'robot_x': 2, 'robot_y': 27, 'human_y': 2, 'human_x': 5, 'time_step': 14}
+move_right
+{'_da': 0, 'robot_x': 3, 'robot_y': 27, 'human_y': 3, 'human_x': 3, 'time_step': 15}
+move_right
+{'_da': 0, 'robot_x': 4, 'robot_y': 27, 'human_y': 1, 'human_x': 4, 'time_step': 16}
+move_right
+{'_da': 0, 'robot_x': 5, 'robot_y': 27, 'human_y': 0, 'human_x': 0, 'time_step': 17}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 28, 'human_y': 0, 'human_x': 0, 'time_step': 18}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 29, 'human_y': 0, 'human_x': 0, 'time_step': 19}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 30, 'human_y': 0, 'human_x': 0, 'time_step': 20}
+move_down
+{'_da': 0, 'robot_x': 5, 'robot_y': 31, 'human_y': 0, 'human_x': 0, 'time_step': 21}
+move_right
+{'_da': 0, 'robot_x': 6, 'robot_y': 31, 'human_y': 0, 'human_x': 0, 'time_step': 22}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 32, 'human_y': 0, 'human_x': 0, 'time_step': 23}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 33, 'human_y': 0, 'human_x': 0, 'time_step': 24}
+move_down
+{'_da': 0, 'robot_x': 6, 'robot_y': 34, 'human_y': 0, 'human_x': 0, 'time_step': 25}
+move_down
+{'_da': 1, 'robot_x': 6, 'robot_y': 35, 'human_y': 36, 'human_x': 5, 'time_step': 26}
+
+-----------------
+
+
+MEAN: 22.2406
